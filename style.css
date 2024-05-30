@@ -1,0 +1,1128 @@
+/*-------------------------------------------*\ 
+Variables
+\*-------------------------------------------*/
+
+
+:root {
+  --color-navbar: #424242;
+  --color-primario:#FFFFFF;
+  --color-secundario: #d93d67;
+  --color-titulo: #000000;
+  --color-texto: #565556;
+  --font-family-body: 'Montserrat', sans-serif;
+  --font-family-title: 'Oswald', sans-serif;
+  --background-acceso: #E5E5E5;
+  --background-button:#383838;
+  --background-footer:#202020;
+  --background-inicio:#F7ECDF;
+  --background-modal:#9D9489;
+  --background-cuerpo-modal:#E7DED5;
+  --background-barra-progreso:#F7ECDF;
+  --background-titulos-formulario:#F6ECDF;
+  --background-back-button:#818181;
+  --background-aviso:#EBEBEB;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*-------------------------------------------*\ 
+*********PAGINA INDEX-CASTELLANO**************
+\*-------------------------------------------*/
+
+
+
+/*-------------------------------------------*\ 
+Navbar.inicio
+\*-------------------------------------------*/
+
+.navbar {
+  background-color: var(--color-navbar);
+}
+
+.navbar-nav li {
+  border-right: 2px solid white; /* Añade un borde derecho de 2px de ancho en color blanco */
+  padding-right: 10px; /* Añade relleno a la derecha del contenido */
+}
+
+/* Estilo para el último elemento li para quitar el borde derecho */
+.navbar-nav li:last-child {
+  border-right: none;
+}
+
+/* .navbar-nav li:first-child {
+  border-right: none;
+} */
+
+.custom-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+select:focus,
+select:active {
+  outline: none;
+  border: none;
+}
+
+#languageSelect:focus{
+  border-color: red ;
+}
+
+.nav-item{
+  color: var(--color-primario);
+  font-family: var(--font-family-body);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+
+/*-------------------------------------------*\ 
+Navbar.fin
+\*-------------------------------------------*/
+
+
+/*-------------------------------------------*\ 
+Seccion acceso.inicio
+\*-------------------------------------------*/
+
+
+ .acceso {
+  background-color: var(--background-inicio);
+  height: 100%;
+  padding-top: 116px;
+}
+
+.area-acceso span{
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  color: var(--color-titulo);
+  font-size: 1.875rem;
+  letter-spacing: 0.3px;
+
+}
+.area-acceso p{
+  font-family: var(--font-family-body);
+  font-weight: 500;
+  color: var(--color-texto);
+  font-size: 1.125rem;
+  letter-spacing: -0.09px;
+
+}
+
+.acceso h2 {
+  color: var(--color-titulo);
+  font-family: var(--font-family-body);
+  font-size: 2.125rem;
+  font-weight: 300;
+  letter-spacing: 0.34px;
+  padding-top: 2.125rem;
+  text-align: center;
+}
+
+.acceso p{
+  color: var(--color-texto);
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.09px;
+  opacity: 1;
+  padding-bottom: 4.5rem;
+  text-align: center;
+}
+
+/* .acceso h2 span{
+  font-weight: 900;
+} */
+
+#boton-izquierdo{
+  color: var(--color-primario);
+  font-family: var(--font-family-body);
+  font-weight: 500 !important;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+}
+#boton-derecho{
+  color: var(--color-primario);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500 !important;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+}
+
+.accordion{
+  width: 20%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+
+.accordion-item button{
+  font-family: var(--font-family-body);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  
+}
+
+/* Ocultar la flecha en el botón del acordeón */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Estilo para el acordeón izquierdo */
+.accordion-button.izquierdo {
+  background-color: #D93D67; /* Reemplaza 'tuColorIzquierdo' con el color que deseas */
+  color: #FFFFFF;
+}
+
+.accordion-button.izquierdo:not(.collapsed) {
+  background-color: #D93D67; /* Reemplaza 'tuColorIzquierdo' con el color que deseas */
+  color: #FFFFFF;
+}
+
+/* Estilo para el acordeón derecho */
+.accordion-button.derecho {
+  background-color: #000000; /* Negro */
+  color: #FFFFFF;
+}
+
+.accordion-button.derecho:not(.collapsed) {
+  background-color: #9D9489; /* Negro */
+  color: white;
+}
+
+/* Cambiar el color de fondo del botón del acordeón cuando está abierto */
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-secundario);
+  color: #FFFFFF;
+  border: none;
+}
+
+/* Estilo para centrar el texto del cuerpo del acordeón */
+
+
+/* Estilo para el cuerpo del acordeón izquierdo */
+#collapseOne .accordion-body {
+  background-color: #E7DED5; /* Gris */
+}
+
+/* Estilo para el cuerpo del acordeón derecho */
+#collapseTwo .accordion-body {
+  background-color: #E7DED5; /* Gris */
+}
+
+
+/* Eliminar el borde azul al enfocar el botón del acordeón */
+.accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+
+/* Opcional: si también deseas eliminar el borde al expandir el acordeón */
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+
+/* Estilo para el relleno inferior de los acordeones */
+.accordion-item {
+  padding-bottom: 40px; /* Puedes ajustar el valor según tus necesidades */
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-body p{
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-texto);
+  letter-spacing: -0.08px;
+  padding-bottom: 0.5em;
+}
+
+#siguiente_password1,#siguiente_password2 {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border: none;
+  font-family: var(--font-family-body);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  padding: 0.6rem 1.2rem;
+}
+
+#siguiente_password1:hover,#siguiente_password2:hover{
+  background-color: var(--color-titulo);
+}
+
+/* Estilo para quitar el borde del campo de entrada de la contraseña */
+#password1,#password2,#dniPasaporte {
+  border: none;
+}
+
+
+input:focus {
+  outline-color: grey; /* Cambia el color de fondo al hacer focus */
+}
+
+.alert{
+  border-top: 1px solid rgb(193, 193, 193);
+  color: var(--color-texto);
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  letter-spacing: -0.08px;
+  text-align: left;
+}
+
+.alerta-acordeon1{
+  color: var(--color-secundario);
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: -0.1px;
+}
+
+@media (max-width: 767.98px) {
+            .accordion-item {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+/* Estilo para quitar el borde exterior del campo de entrada de la contraseña */
+/* #password1:focus {
+  outline: none;
+} */
+
+
+/*-------------------------------------------*\ 
+Seccion acceso.fin
+\*-------------------------------------------*/
+
+
+/*-------------------------------------------*\ 
+Modal.inicio
+\*-------------------------------------------*/
+
+.modal-header h5{
+  color: var(--color-texto);
+  font-family: var(--font-family-body);
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.alerta{
+  background-color: var(--background-alerta);
+  
+}
+
+.modal-body{
+  margin-bottom: 1.8em;
+  margin-top: 1.4em;
+  text-align: left;
+}
+
+.modal-body, .alerta p{
+  color: var(--color-titulo);
+  font-family: var(--font-family-body);
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.alerta h5{
+  color: var(--color-secundario);
+  font-family: var(--font-family-body);
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: -0.14px;
+}
+
+.alerta p{
+  margin-bottom: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+/* colocar x en esquina superior derecha */
+.modal-header .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+/*-------------------------------------------*\ 
+Modal.fin
+\*-------------------------------------------*/
+
+/*-------------------------------------------*\ 
+Ayuda.inicio
+\*-------------------------------------------*/
+
+.ayuda {
+  height: auto;
+  padding-bottom: 3rem;
+  background-color: var(--background-inicio);
+}
+
+.ayuda h2{
+  color: var(--color-titulo);
+  font-family: var(--font-family-body);
+  font-size: 2.125rem;
+  font-weight: 300;
+  letter-spacing: 0.34px;
+  padding-top: 4.3rem;
+  
+}
+
+.ayuda h2 span{
+  font-weight: 900;
+}
+
+.ayuda p{
+  color: var(--color-texto);
+  font-family: var(--font-family-body);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  opacity: 1;
+  padding-bottom: 0.1rem;
+}
+
+#problema{
+  color: var(--color-texto);
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.08px;
+}
+
+#necesitas-ayuda{
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: var(--color-titulo);
+  letter-spacing: 0.3px;
+}
+
+
+.btn-ayuda{
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  font-family: var(--font-family-body);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.4rem 2.5rem;
+  opacity: 1;
+}
+
+.btn-ayuda:hover{
+  background-color: var(--color-titulo);
+  color: var(--color-primario);
+}
+
+
+.btn-ayuda i {
+  position: relative;
+  bottom: -2px;  /* Descomenta esta línea para mover el icono hacia abajo */
+}
+
+
+.ayuda hr{
+  width: 20%;
+  margin: 1em auto;
+  
+}
+
+
+/*-------------------------------------------*\ 
+Ayuda.fin
+\*-------------------------------------------*/
+
+
+
+/*-------------------------------------------*\ 
+Footer.inicio
+\*-------------------------------------------*/
+
+
+footer {
+  margin-top: 0;
+}
+
+.seccion-roja {
+  color: #ffffff;
+  padding-top: 40px;
+  margin-top: 0;
+}
+
+i {
+  margin-right: 0.5em;
+}
+
+.text-reset {
+  border-bottom: 1px solid rgb(77, 76, 76);
+  padding-bottom: 0.5em;
+  text-decoration: none;
+}
+.seccion-dos {
+  background-color: var(--background-footer);
+  color: var(--color-primario);
+  padding-top: 40px;
+}
+.seccion-dos h6 {
+  color: var(--color-secundario);
+}
+
+.politica {
+  color: inherit; /* Esto hace que los enlaces tomen el color del texto circundante */
+  text-decoration: none;
+}
+.politica:hover {
+  color: var(--color-secundario); /* Esto hace que los enlaces tomen el color del texto circundante */
+}
+
+#copyright {
+  background: var(--color-titulo);
+  color: #C1C1C1;
+}
+
+/*-------------------------------------------*\ 
+Footer.fin
+\*-------------------------------------------*/
+
+
+/*-------------------------------------------*\ 
+*********PAGINA INSCRIPCION1******************
+\*-------------------------------------------*/
+
+/*-------------------------------------------*\ 
+Barra progreso.inicio
+\*-------------------------------------------*/
+
+.progreso{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: var(--background-barra-progreso);
+ }
+
+ .progreso .bienvenida h2{
+  color: var(--color-texto);
+  font-family: var(--font-family-title);
+  font-size: 2.75rem;
+  font-weight: 400;
+  padding-left: 3rem;
+  letter-spacing: 0.44px;
+  text-align: center;
+ }
+ .progreso .bienvenida p{
+  color: var(--color-texto);
+  font-family: var(--font-family-body);
+  font-size: 0.563rem;
+  font-weight: 500;
+  letter-spacing: 4.5px;
+  text-align: center;
+  margin-bottom: 0;
+ }
+
+
+.progress-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.progress {
+  height: 8px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--color-secundario);
+  transition: width 0.4s ease;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primario);
+  border: 2px solid var(--color-secundario);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.step.completed {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .progress-container {
+      max-width: 100%;
+  }
+  .steps {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .step {
+      margin: 5px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .text-center h2, .text-center h1 {
+      text-align: center;
+  }
+}
+
+
+/*-------------------------------------------*\ 
+Barra progreso.fin
+\*-------------------------------------------*/
+
+/*-------------------------------------------*\ 
+Titulo.inicio
+\*-------------------------------------------*/
+.titulo{
+  height: auto;
+  padding-top: 1em;
+  background-color: white;
+}
+
+.titulo h2 span{
+  color: var(--color-secundario);
+  font-family: var(--font-family-title);
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+.titulo h2{
+  color: var(--color-titulo);
+  font-family: var(--font-family-title);
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+
+/*-------------------------------------------*\ 
+Titulo.fin
+\*-------------------------------------------*/
+
+
+/*-------------------------------------------*\ 
+Trip info.inicio
+\*-------------------------------------------*/
+.tab-header {
+  position: absolute;
+  top: -40px; /* Ajusta según el tamaño de la pestaña */
+  left: 0;
+  background-color: var(--color-secundario);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  padding-top: 2em;
+}
+
+.tab-header p{
+  font-family: var(--font-family-title);
+  font-weight: 300;
+  color: var(--color-secundario);
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+}
+
+.toast-info{
+  position: absolute;
+}
+
+
+.fondo-main{
+  background-color: #EBEBEB;
+  }
+  
+  .fondo-main .container h2 {
+    background-color: transparent;
+    margin-left: 1em;
+  }
+  
+  .tuviaje{
+    color: var(--color-secundario);
+    font-family: var(--font-family-title);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.31px;
+  }
+  
+  .trip-info {
+    background-color: #f1f1f1;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+    height: auto;
+  }
+  
+  .trip-info p {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Línea horizontal debajo de cada <p> */
+    display: inline-block;
+    width: 95%;
+  }
+  .trip-info .label {
+    color: var(--color-secundario);
+    font-family: var(--font-family-body);
+    font-size: 1.063rem;
+    font-weight: 500;
+    letter-spacing: -0.09px;
+    margin-left: 15px;
+    margin-right: 10px;
+    
+  }
+  .trip-info .row {
+    align-items: center;
+  }
+  .trip-info .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 768px) {
+    .trip-info p {
+        margin-bottom: 15px; /* Añadir espacio debajo del contenedor */
+    }
+  }
+  
+  /*-------------------------------------------*\ 
+  Trip info.fin
+  \*-------------------------------------------*/
+
+  /*-------------------------------------------*\ 
+Pasajero.inicio
+\*-------------------------------------------*/
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.pasajero{
+  background-color: var(--background-pasajero);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-secundario);
+  border-color: var(--color-secundario);
+}
+.form-check-input:focus {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 0.25rem rgba(217, 83, 79, 0.25);
+}
+
+.custom-radio-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.form-section {
+  padding: 20px;
+}
+
+.pt-custom {
+  margin-top: 80px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+/* .personales{
+  background-color: var(--background-titulos-formulario);
+  } */
+  
+   .pasajero{
+  background-color: var(--background-titulos-formulario);
+  } 
+
+  .titulo-formulario{
+    background-color: var(--background-titulos-formulario);
+  }
+
+  
+  .pasajero h1{
+  color: var(--color-titulo);
+  font-family: var(--font-family-body);
+  font-size: 1.75rem;
+  letter-spacing: 0.28px;
+  }
+  
+  .pasajero h2{
+  color: var(--color-secundario);
+  font-family: var(--font-family-body);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+  margin-left: 1.7em;
+  }
+
+  .pasajero i{
+    color: var(--color-titulo);
+    }
+    
+    .fondo-pasajero{
+    background-color: var(--color-primario);
+    }
+
+
+/* toast */
+
+
+.toast-body{
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+}
+
+.titulo-toast{
+  color: var(--color-primario);
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: -0.11px;
+}
+.parrafo-toast{
+  color: var(--color-primario);
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.08px;
+}
+
+.toast-header i {
+  color: var(--color-primario) !important;
+}
+
+.toast-header{
+  background-color: var(--color-secundario);
+}
+
+
+
+
+    /* botones atrás-siguiente */
+
+.btn-back {
+  background-color: var(--background-back-button);
+  color: white;
+  border-right: 2px solid white;
+  }
+  .btn-next {
+  background-color: var(--color-secundario);
+  color: white;
+  }
+  
+  
+  
+  
+  .custom-btn-height {
+  height: 80px; /* Ajusta esta altura según tus necesidades */
+  border-radius: 0;
+  }
+  
+  .btn-back, .btn-next {
+  margin: 0; /* Asegúrate de que no haya márgenes entre los botones */
+  font-family: var(--font-family-body);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-primario);
+  }
+  
+  .col-6 {
+  padding: 0; /* Elimina cualquier padding del contenedor */
+  }
+  
+  .row.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+  }
+  
+  /* datos personales */
+  
+  /* Estilo base */
+  .custom-radio-group .form-check-inline {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Añade margen derecho para espaciado entre los radios */
+  }
+  
+  .form-check-label {
+  margin-left: 5px; /* Espacio entre el radio y el texto */
+  }
+  
+  /* Media Queries para dispositivos móviles y tablets */
+  @media (max-width: 768px) {
+  .custom-radio-group .form-check-inline {
+    display: block;
+    margin-bottom: 10px;
+  }
+  }
+  
+  @media (max-width: 1024px) {
+  .form-section .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  }
+
+  /* avisos alergia */
+
+.avisos{
+  background-color: var(--background-aviso);
+  padding: 4em 4em;
+  margin-bottom: 1em;
+}
+
+.avisos h4{
+  color: var(--color-secundario);
+  font-family: var(--font-family-title);
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.11px;
+}
+.avisos strong{
+  color: var(--color-secundario);
+  font-family: var(--font-family-body);
+  font-size: 1.063rem;
+  font-weight: 500;
+  letter-spacing: -0.09px;
+}
+.avisos p{
+  color: var(--background-button);
+  font-family: var(--font-family-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.07px;
+}
+
+.avisos a {
+  color: var(--color-titulo);
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 576px) {
+  .avisos {
+      padding: 2em 10px;
+  }
+}
+
+  
+  
+  
+  /*-------------------------------------------*\ 
+  Pasajero.fin
+  \*-------------------------------------------*/
+  
+  
+  
+  .footer-inscripcion{
+    min-height: 600px;
+  }
+
+
+  /*-------------------------------------------*\ 
+  Botones datos pasajeros.inicio
+  \*-------------------------------------------*/
+  
+  .position-relative {
+    position: relative;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.btn-black {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-custom-size {
+  width: 280px; 
+  height: 50px; 
+  font-size: 1.2em; 
+}
+
+.btn-custom-color-izquierda {
+  background-color: var(--background-back-button); /* Your custom background color */
+  color: #fff;
+}
+.btn-custom-color-izquierda:hover {
+  background-color: var(--color-titulo); /* Your custom background color */
+  color: #fff;
+}
+
+
+.btn-custom-color-derecha {
+  background-color: var(--color-secundario); /* Your custom background color */
+  color: #fff;
+}
+
+.btn-custom-color-derecha:hover {
+  background-color: var(--color-titulo); /* Your custom background color */
+  color: #fff;
+}
+
+.btn-custom-size {
+color: var(--color-primario);
+font-family: var(--font-family-title);
+font-weight: bold;
+font-size: 1.3rem;
+letter-spacing: 0.2px;
+
+}
+
+@media (max-width: 576px) {
+  .btn-custom-size {
+      width: 200px; 
+      height: 60px; 
+      font-size: 1em;
+  }
+}
+
+
+/*-------------------------------------------*\ 
+  Botones datos pasajeros.fin
+\*-------------------------------------------*/
+
+
+
+
+  /*-------------------------------------------*\ 
+  *********PAGINA INSCRIPCION1******************
+  \*-------------------------------------------*/
+
+
+
+  /*-------------------------------------------*\ 
+  *********PAGINA CONDICIONES3******************
+  \*-------------------------------------------*/
+
+/*-------------------------------------------*\ 
+  Aspectos legales.inicio
+\*-------------------------------------------*/
+
+  .main-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.embed-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.consent {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+    background-color: #fff3f3;
+}
+.consent input {
+    margin-right: 10px;
+}
+
+.legal h2{
+  color: var(--color-secundario);
+  font-family: var(--font-family-title);
+  font-weight: 300;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+
+
+/*-------------------------------------------*\ 
+  Aspectos legales.fin
+\*-------------------------------------------*/
+
+
+  /*-------------------------------------------*\ 
+  *********PAGINA CONDICIONES3******************
+  \*-------------------------------------------*/
+
+  
+      
+      
+ 
+/* css mientras espero seguir con inscripcion */
+
+
+
+
+
+
+/* pasajero responsive */
+
+
+
+
+/* datos */
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-left: 1.5em;
+}
+
+.checkbox-label input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.linguistic-section {
+  
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.linguistic-section p {
+  margin-bottom: 0;
+}
+
+.linguistic-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
